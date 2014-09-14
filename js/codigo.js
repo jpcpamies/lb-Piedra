@@ -1,70 +1,70 @@
 
-// Genera un número aleatorio entre un rango de enteros
-function aleatorio()
+// Generador de un número aleatorio
+function aleatorio(maximo, minimo)
 {
-	var numero = Math.floor( Math.random() * (maximo - minimo + 1) + minimo )
-	return numero
+	var numero = Math.floor(Math.random() + (maximo - minimo) + minimo);
+	return numero;
 }
 
-var piedra = 0
-var papel = 1
-var tijera = 2
+var piedra = 0;
+var papel = 1;
+var tijera = 2;
+var opciones = ["Piedra", "Papel", "Tijera"];
 
 var opcionUsuario;
-var opcionMaquina = aleatorio[0,2];
+var opcionMaquina = aleatorio(0,2);
 
-var opciones = ["piedra", "papel", "tijera"];
+opcionUsuario = prompt("¿Qué elijes: \nPiedra:0\nPapel:1\nTijera:2?" , 0);
+alert( "Elejiste " + opciones[opcionUsuario] );
+alert( "JavaScript elijió " + opciones[opcionMaquina] );
 
-opcionUsuario = prompt ("¿Qué eliges piedra, papel o tijera?" , "piedra");
-alert("Has elegido " + opcionUsuario);
-alert("JavaScript ha elegido " + opcionMaquina)
 
-if(opcionUsuario == "piedra")
+if(opcionUsuario == 0)
 {
-	if(opcionMaquina == "piedra")
+	if(opcionMaquina == piedra)
 	{
-		alert("Empate!!");
+		alert("Empate");
 	}
-	else if(opcionMaquina == "papel")
+	else if(opcionMaquina == papel)
 	{
-		alert("Perdiste :(");
+		alert("Perdiste");
 	}
-	else if(opcionMaquina == "tijera")
+	else if(opcionMaquina == tijera)
 	{
-		alert("Ganaste :)!!");
+		alert("Ganaste");
 	}
 }
-else if(opcionUsuario == "papel")
+else if(opcionUsuario == 1)
 {
-	if(opcionMaquina == "piedra")
+	if(opcionMaquina == piedra)
 	{
-		alert("Ganaste :)!!");
+		alert("Ganaste");
 	}
-	else if(opcionMaquina == "papel")
+	else if(opcionMaquina == papel)
 	{
-		alert("Empate!!");
+		alert("Empate");
 	}
-	else if(opcionMaquina == "tijera")
+	else if(opcionMaquina == tijera)
 	{
-		alert("Perdiste :(!!");
+		alert("Perdiste");
 	}
 }
-else if(opcionUsuario == "tijera")
+else if(opcionUsuario == 2)
 {
-	if(opcionMaquina == "piedra")
+	if(opcionMaquina == piedra)
 	{
-		alert("Perdiste :(!!");
+		alert("Perdiste");
 	}
-	else if(opcionMaquina == "papel")
+	else if(opcionMaquina == papel)
 	{
-		alert("Ganaste :)!!");
+		alert("Ganaste");
 	}
-	else if(opcionMaquina == "tijera")
+	else if(opcionMaquina == tijera)
 	{
-		alert("Empate!!");
+		alert("Empate");
 	}
 }
 else
 {
-	alert("What the fock!! ¿Quieres jugar bien?")
+	alert("¿Qué has hecho ahí?")
 }
