@@ -1,6 +1,19 @@
 
+// Genera un número aleatorio entre un rango de enteros
+function aleatorio()
+{
+	var numero = Math.floor( Math.random() * (maximo - minimo + 1) + minimo )
+	return numero
+}
+
+var piedra = 0
+var papel = 1
+var tijera = 2
+
 var opcionUsuario;
-var opcionMaquina = "piedra";
+var opcionMaquina = aleatorio[0,2];
+
+var opciones = ["piedra", "papel", "tijera"];
 
 opcionUsuario = prompt ("¿Qué eliges piedra, papel o tijera?" , "piedra");
 alert("Has elegido " + opcionUsuario);
@@ -50,4 +63,8 @@ else if(opcionUsuario == "tijera")
 	{
 		alert("Empate!!");
 	}
+}
+else
+{
+	alert("What the fock!! ¿Quieres jugar bien?")
 }
