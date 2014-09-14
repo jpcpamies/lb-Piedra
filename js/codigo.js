@@ -9,12 +9,14 @@ function aleatorio(maximo, minimo)
 var piedra = 0;
 var papel = 1;
 var tijera = 2;
-var opciones = ["Piedra", "Papel", "Tijera"];
+var lagarto = 3;
+var spock = 4;
+var opciones = ["Piedra", "Papel", "Tijera", "Lagarto", "Spock"];
 
 var opcionUsuario;
-var opcionMaquina = aleatorio(0,2);
+var opcionMaquina = aleatorio(0,4);
 
-opcionUsuario = prompt("¿Qué elijes: \nPiedra:0\nPapel:1\nTijera:2?" , 0);
+opcionUsuario = prompt("¿Qué elijes: \nPiedra:0\nPapel:1\nTijera:2?\nLagarto:3\nSpock:4" , 0);
 alert( "Elejiste " + opciones[opcionUsuario] );
 alert( "JavaScript elijió " + opciones[opcionMaquina] );
 
