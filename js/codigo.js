@@ -14,7 +14,7 @@ var spock = 4;
 var opciones = ["Piedra", "Papel", "Tijera", "Lagarto", "Spock"];
 
 var opcionUsuario;
-var opcionMaquina = aleatorio(0,4);
+var opcionMaquina = aleatorio(4,0);
 
 opcionUsuario = prompt("¿Qué elijes: \nPiedra:0\nPapel:1\nTijera:2\nLagarto:3\nSpock:4?" , 0);
 alert( "Elejiste " + opciones[opcionUsuario] );
